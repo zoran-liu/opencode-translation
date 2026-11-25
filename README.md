@@ -56,17 +56,28 @@ Requires OpenCode V2 (tested against 2.3.2).
 ```jsonc
 // opencode.json (project) — server + TUI
 {
+  "plugins": ["opencode-translation"]
+}
+```
+
+With options:
+
+```jsonc
+{
   "plugins": [
     {
-      "package": "/absolute/path/to/opencode-translation",
+      "package": "opencode-translation",
       "options": { "model": "opencode/deepseek-v4.1-flash-free" }
     }
   ]
 }
 ```
 
+(For development you can also point `package` at a local checkout path.)
+
 For the **GUI**, the plugin must also be listed in the **global** config
-(`~/.config/opencode/opencode.json`), and the GUI bundle must be built once:
+(`~/.config/opencode/opencode.json`). The npm package ships the prebuilt GUI
+bundle; only a local checkout needs to build it once:
 
 ```sh
 bun install
@@ -113,7 +124,7 @@ Example with manual overrides:
 {
   "plugins": [
     {
-      "package": "/absolute/path/to/opencode-translation",
+      "package": "opencode-translation",
       "options": {
         "language": "zh-cn",
         "model": "opencode/deepseek-v4.1-flash-free",

@@ -4,6 +4,23 @@
   "description": "OpenCode plugin that translates command, skill and agent descriptions for TUI and GUI, with a free or local model.",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoran-liu/opencode-translation.git"
+  },
+  "homepage": "https://github.com/zoran-liu/opencode-translation#readme",
+  "bugs": {
+    "url": "https://github.com/zoran-liu/opencode-translation/issues"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "translation",
+    "i18n",
+    "localization",
+    "tui",
+    "gui"
+  ],
   "exports": {
     ".": "./src/index.ts",
     "./server": "./src/index.ts",
